@@ -1,0 +1,24 @@
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="pokemon[name]">Name:</label>
+  <input name="pokemon[name]" value="<%= @pokemon.name %>">
+
+  <label for="pokemon[cp]">Combat Points:</label>
+  <input name="pokemon[cp]" value="<%= @pokemon.cp %>">
+
+  <label for="pokemon[poke_type]">Species:</label>
+  <input name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
+
+  <label for="pokemon[img_url]">Picture:</label>
+  <input name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
+
+  <input type="submit" value="Update">
+</form>
+
+
+<h2>SICK OF YOUR POKEMON?  OH NOES!  (delete it here.)</h2>
+<form action="/instructors/<%= @instructor.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete!">
+</form>
